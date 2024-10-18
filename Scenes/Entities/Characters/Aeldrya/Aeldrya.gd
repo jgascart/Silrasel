@@ -12,4 +12,6 @@ func move() -> void:
 	
 	velocity = move_direction.normalized() * SPEED
 	
+	$AeldryaAnimations.animate_movement(move_direction)
+	
 	move_and_slide()

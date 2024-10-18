@@ -2,9 +2,7 @@ extends AnimatedSprite2D
 
 var move_animation : String = "idle_down"
 
-func _process(delta: float) -> void:
-	var move_direction = get_parent().move_direction
-	
+func animate_movement(move_direction : Vector2) -> void:
 	match move_direction:
 		Vector2(-1, 0):
 			move_animation = "run_left"
@@ -31,6 +29,6 @@ func _process(delta: float) -> void:
 		Vector2(1, 0):
 			move_animation = "run_right"
 		Vector2(1,1):
-			move_direction = "run_down_right"
+			move_animation = "run_down_right"
 		
 	play(move_animation)
