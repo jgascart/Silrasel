@@ -1,0 +1,12 @@
+{
+	"languages" : [
+		{	
+			"language" : "English",
+			"symbol" : "EN"
+		},
+		{	
+			"language" : "Test Language",
+			"symbol" : "TL"
+		}
+	]
+}

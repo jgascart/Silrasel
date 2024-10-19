@@ -1,0 +1,8 @@
+{
+	"main_menu" : {
+		"new_game_button" : "New Game",
+		"continue_button" : "Continue",
+		"settings_button" : "Settings",
+		"exit_button" : "Exit"
+	} 
+}

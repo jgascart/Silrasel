@@ -3,6 +3,9 @@ extends Node
 const SETTINGS_FILE = "res://Config.ini"
 
 var settings = {
+	"general" : {
+		"language" : "EN"
+	}, 
 	"video" : {
 		"full_screen" = false
 	} ,
