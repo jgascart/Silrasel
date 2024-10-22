@@ -38,13 +38,15 @@ func _ready() -> void:
 		button.mouse_entered.connect(select_button.bind(button))
 		button.button_down.connect(click_button.bind(button))
 
-func _process(_delta: float) -> void:
-	if Input.is_action_just_pressed("move_down"):
+func _unhandled_input(event: InputEvent) -> void:
+	if !active: return
+	
+	if event.is_action_pressed("move_down"):
 		menu_index += 1
 		if menu_index < 0: menu_index = 0
 		if menu_index > 3: menu_index = 0
 		select_button(menu_buttons[menu_index])
-	if Input.is_action_just_pressed("move_up"):
+	if event.is_action_pressed("move_up"):
 		menu_index -= 1
 		if menu_index < 0: menu_index = 3
 		if menu_index > 3: menu_index = 0
@@ -56,10 +58,15 @@ func load_language() -> void:
 	if file:
 		var result = JSON.parse_string(file.get_as_text())
 		
-		new_game_label.text = result["main_menu"]["new_game_button"]
-		continue_label.text = result["main_menu"]["continue_button"]
-		settings_label.text = result["main_menu"]["settings_button"]
-		exit_label.text = result["main_menu"]["exit_button"]
+		new_game_label.text = result["main_menu"]["new_game_button"]["text"]
+		continue_label.text = result["main_menu"]["continue_button"]["text"]
+		settings_label.text = result["main_menu"]["settings_button"]["text"]
+		exit_label.text = result["main_menu"]["exit_button"]["text"]
+		
+		new_game_label.add_theme_font_size_override("font_size", result["main_menu"]["new_game_button"]["size"])
+		continue_label.add_theme_font_size_override("font_size", result["main_menu"]["continue_button"]["size"])
+		settings_label.add_theme_font_size_override("font_size",result["main_menu"]["settings_button"]["size"])
+		exit_label.add_theme_font_size_override("font_size",result["main_menu"]["exit_button"]["size"])
 
 func load_language_options() -> void:
 	var file = FileAccess.open(LANGUAGE_FILE, FileAccess.READ)
@@ -70,6 +77,8 @@ func load_language_options() -> void:
 			language_selector.add_item(language["language"])
 
 func select_button(selected_button : Button) -> void:
+	if !active: return
+	
 	var index = 0
 	menu_sound_player.play()
 	for button : Button in menu_buttons:
@@ -80,4 +89,9 @@ func select_button(selected_button : Button) -> void:
 		index += 1
 
 func click_button(selected_button : Button) -> void:
-	print("Click")
+	if !active: return
+	
+	if selected_button == new_game_button: pass
+	if selected_button == continue_button: pass
+	if selected_button == settings_button: pass
+	if selected_button == exit_button: pass

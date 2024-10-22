@@ -1,8 +1,34 @@
 {
 	"main_menu" : {
-		"new_game_button" : "New Game",
-		"continue_button" : "Continue",
-		"settings_button" : "Settings",
-		"exit_button" : "Exit"
-	} 
+		"new_game_button" : {
+			"text" : "New Game",
+			"size" : 50
+		},
+		"continue_button" : {
+			"text" :  "Continue",
+			"size" : 50
+		},
+		"settings_button" : {
+			"text" : "Settings",
+			"size" : 50
+		},
+		"exit_button" : {
+			"text" : "Exit",
+			"size" : 50
+		}
+	},
+	"new_game_menu" : {
+		"easy_button" : {
+			"text" : "Easy",
+			"size" : 50
+		},
+		"normal_button" : {
+			"text" : "Normal",
+			"size" : 50
+		},
+		"hard_button" : {
+			"text" : "Hard",
+			"size" : 50
+		}
+	}
 }

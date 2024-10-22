@@ -1,0 +1,16 @@
+[gd_scene load_steps=5 format=3 uid="uid://dwn5hibwbdb20"]
+
+[ext_resource type="PackedScene" uid="uid://ds5mvqqj7wgcx" path="res://Scenes/Game/Interface.tscn" id="1_7j4dr"]
+[ext_resource type="PackedScene" uid="uid://dced74tbug2wl" path="res://Scenes/Game/World.tscn" id="1_axgyi"]
+[ext_resource type="PackedScene" uid="uid://bju4juwmx58ap" path="res://Scenes/Game/Maps.tscn" id="3_yfwwy"]
+[ext_resource type="PackedScene" uid="uid://dw3u5ssenrk0k" path="res://Scenes/Game/Player.tscn" id="4_2kem0"]
+
+[node name="Game" type="Node"]
+
+[node name="Interface" parent="." instance=ExtResource("1_7j4dr")]
+
+[node name="World" parent="." instance=ExtResource("1_axgyi")]
+
+[node name="Maps" parent="World" instance=ExtResource("3_yfwwy")]
+
+[node name="Player" parent="World" instance=ExtResource("4_2kem0")]
