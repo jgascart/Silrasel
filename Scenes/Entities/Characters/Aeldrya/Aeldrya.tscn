@@ -465,6 +465,13 @@ collision_mask = 6
 motion_mode = 1
 script = ExtResource("1_gdmr7")
 
+[node name="Skills" type="Node" parent="."]
+
+[node name="Fireball" type="Node" parent="Skills"]
+
+[node name="FireballTimer" type="Timer" parent="Skills/Fireball"]
+wait_time = 3.0
+
 [node name="Camera2D" type="Camera2D" parent="."]
 
 [node name="AeldryaAnimations" type="AnimatedSprite2D" parent="."]
@@ -477,3 +484,9 @@ position = Vector2(0, 44)
 rotation = 1.5708
 scale = Vector2(0.5, 0.5)
 shape = SubResource("CapsuleShape2D_fkn2g")
+
+[node name="Direction" type="Node2D" parent="."]
+rotation = 1.5708
+
+[node name="SkillPoint" type="Marker2D" parent="Direction"]
+position = Vector2(56, 0)
