@@ -1,4 +1,4 @@
-[gd_scene load_steps=61 format=3 uid="uid://date0rfhedrwu"]
+[gd_scene load_steps=62 format=3 uid="uid://date0rfhedrwu"]
 
 [ext_resource type="Script" path="res://Scenes/Entities/Characters/Aeldrya/Aeldrya.gd" id="1_gdmr7"]
 [ext_resource type="Texture2D" uid="uid://cslviriu4mxxo" path="res://Assets/Images/Characters/Aeldrya/Animations/Idle/Idle_down.png" id="2_tvd42"]
@@ -455,8 +455,13 @@ animations = [{
 "speed": 10.0
 }]
 
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_fkn2g"]
+radius = 68.0
+height = 216.0
+
 [node name="Aeldrya" type="CharacterBody2D"]
 scale = Vector2(0.5, 0.5)
+collision_mask = 6
 motion_mode = 1
 script = ExtResource("1_gdmr7")
 
@@ -464,5 +469,11 @@ script = ExtResource("1_gdmr7")
 
 [node name="AeldryaAnimations" type="AnimatedSprite2D" parent="."]
 sprite_frames = SubResource("SpriteFrames_e8i5m")
-animation = &"idle_down_right"
+animation = &"idle_down"
 script = ExtResource("11_drm4b")
+
+[node name="Collision" type="CollisionShape2D" parent="."]
+position = Vector2(0, 44)
+rotation = 1.5708
+scale = Vector2(0.5, 0.5)
+shape = SubResource("CapsuleShape2D_fkn2g")
