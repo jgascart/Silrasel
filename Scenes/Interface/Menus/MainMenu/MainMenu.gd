@@ -13,23 +13,25 @@ var language_folder = "res://Data/" + Settings.settings["general"]["language"] +
 @onready var settings_button : Button = $MenuMarginContainer/Menu/SettingsBackground/SettingsButton
 @onready var exit_button : Button = $MenuMarginContainer/Menu/ExitBackground/ExitButton
 
-@onready var new_game_background: TextureRect = $MenuMarginContainer/Menu/NewGameBackground
-@onready var continue_background: TextureRect = $MenuMarginContainer/Menu/ContinueBackground
-@onready var settings_background: TextureRect = $MenuMarginContainer/Menu/SettingsBackground
-@onready var exit_background: TextureRect = $MenuMarginContainer/Menu/ExitBackground
+@onready var new_game_background : TextureRect = $MenuMarginContainer/Menu/NewGameBackground
+@onready var continue_background : TextureRect = $MenuMarginContainer/Menu/ContinueBackground
+@onready var settings_background : TextureRect = $MenuMarginContainer/Menu/SettingsBackground
+@onready var exit_background : TextureRect = $MenuMarginContainer/Menu/ExitBackground
 
-@onready var language_selector: OptionButton = $LanguageSelector
+@onready var language_selector : OptionButton = $LanguageSelector
 
-@onready var menu_sound_player: AudioStreamPlayer = $MenuSoundPlayer
+@onready var menu_sound_player : AudioStreamPlayer = $MenuSoundPlayer
 
 const BUTTON_ON_TEXTURE : Texture2D = preload("res://Assets/Images/Menu/Button_on.png")
 const BUTTON_OFF_TEXTURE : Texture2D = preload("res://Assets/Images/Menu/Button_off.png")
 
 var menu_index : int = -1
-var active : bool = true
+var active : bool = false
 
 @onready var menu_backgrounds : Array[TextureRect] = [new_game_background, continue_background, settings_background, exit_background]
 @onready var menu_buttons : Array[Button] = [new_game_button, continue_button, settings_button, exit_button]
+
+signal select_menu(menu : int)
 
 func _ready() -> void:
 	load_language()
@@ -38,7 +40,7 @@ func _ready() -> void:
 		button.mouse_entered.connect(select_button.bind(button))
 		button.button_down.connect(click_button.bind(button))
 
-func _unhandled_input(event: InputEvent) -> void:
+func _unhandled_input(event : InputEvent) -> void:
 	if !active: return
 	
 	if event.is_action_pressed("move_down"):
@@ -51,6 +53,8 @@ func _unhandled_input(event: InputEvent) -> void:
 		if menu_index < 0: menu_index = 3
 		if menu_index > 3: menu_index = 0
 		select_button(menu_buttons[menu_index])
+	if event.is_action_pressed("interact_button"):
+		click_button(menu_buttons[menu_index])
 
 func load_language() -> void:
 	var file = FileAccess.open(language_folder, FileAccess.READ)
@@ -91,7 +95,7 @@ func select_button(selected_button : Button) -> void:
 func click_button(selected_button : Button) -> void:
 	if !active: return
 	
-	if selected_button == new_game_button: pass
-	if selected_button == continue_button: pass
-	if selected_button == settings_button: pass
-	if selected_button == exit_button: pass
+	if selected_button == new_game_button: select_menu.emit(StartMenu.MENU.NEW_GAME_MENU)
+	if selected_button == continue_button: select_menu.emit(StartMenu.MENU.CONTINUE_MENU)
+	if selected_button == settings_button: select_menu.emit(StartMenu.MENU.SETTINGS_MENU)
+	if selected_button == exit_button: get_tree().quit()
