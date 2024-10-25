@@ -10,7 +10,7 @@ extends Control
 var menu_index : int = -1
 var active : bool = false
 
-signal select_menu(menu : int)
+signal select_menu(menu : StartMenu.MENU)
 
 func _ready() -> void:
 	for button : Button in menu_buttons:
@@ -37,7 +37,8 @@ func select_button(_selected_button : Button) -> void:
 	pass
 
 func click_button(selected_button : Button) -> void:
-	if selected_button == easy_button: pass
-	if selected_button == normal_button: pass
-	if selected_button == hard_button: pass
+	if selected_button == easy_button: Game.new_game(Game.DIFFICULTY.EASY)
+	if selected_button == normal_button:  Game.new_game(Game.DIFFICULTY.NORMAL)
+	if selected_button == hard_button:  Game.new_game(Game.DIFFICULTY.HARD)
 	if selected_button == return_button: select_menu.emit(StartMenu.MENU.MAIN_MENU)
+	else: get_node("/root/Main").queue_free()

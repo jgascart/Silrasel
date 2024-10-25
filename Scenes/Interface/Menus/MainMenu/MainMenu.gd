@@ -31,7 +31,7 @@ var active : bool = false
 @onready var menu_backgrounds : Array[TextureRect] = [new_game_background, continue_background, settings_background, exit_background]
 @onready var menu_buttons : Array[Button] = [new_game_button, continue_button, settings_button, exit_button]
 
-signal select_menu(menu : int)
+signal select_menu(menu : StartMenu.MENU)
 
 func _ready() -> void:
 	load_language()

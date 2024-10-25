@@ -23,10 +23,10 @@ func select_menu(menu : MENU) -> void:
 	match menu:
 		MENU.MAIN_MENU: show_menu(main_menu)
 		MENU.NEW_GAME_MENU: show_menu(new_game_menu)
-		2: pass
-		3: pass
-		4: pass
-	
+		MENU.CONTINUE_MENU: pass
+		MENU.SETTINGS_MENU: pass
+		MENU.LANGUAGE_MENU: pass
+
 func show_menu(selected_menu : Control) -> void:
 	for menu in menus:
 		menu.visible = false

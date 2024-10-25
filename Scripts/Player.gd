@@ -1,4 +1,5 @@
 extends Node
+class_name Player
 
 var stats : Dictionary = {
 	# Base Stats (Level + stat points)
