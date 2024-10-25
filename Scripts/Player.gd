@@ -1,4 +1,3 @@
-extends Node
 class_name Player
 
 var stats : Dictionary = {

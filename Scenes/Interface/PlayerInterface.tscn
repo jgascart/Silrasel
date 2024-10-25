@@ -1,7 +1,10 @@
-[gd_scene load_steps=2 format=3 uid="uid://ds5mvqqj7wgcx"]
+[gd_scene load_steps=3 format=3 uid="uid://ds5mvqqj7wgcx"]
 
 [ext_resource type="Script" path="res://Scenes/Interface/PlayerInterface.gd" id="1_x2tsf"]
+[ext_resource type="PackedScene" uid="uid://oc3pa4oswufp" path="res://Scenes/Interface/PlayerStatus/PlayerResources.tscn" id="2_uicbw"]
 
-[node name="Interface" type="Node"]
+[node name="PlayerInterface" type="CanvasLayer"]
 process_mode = 3
 script = ExtResource("1_x2tsf")
+
+[node name="PlayerResources" parent="." instance=ExtResource("2_uicbw")]

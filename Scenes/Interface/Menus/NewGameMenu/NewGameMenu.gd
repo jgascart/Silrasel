@@ -37,8 +37,8 @@ func select_button(_selected_button : Button) -> void:
 	pass
 
 func click_button(selected_button : Button) -> void:
-	if selected_button == easy_button: Game.new_game(Game.DIFFICULTY.EASY)
-	if selected_button == normal_button:  Game.new_game(Game.DIFFICULTY.NORMAL)
-	if selected_button == hard_button:  Game.new_game(Game.DIFFICULTY.HARD)
+	if selected_button == easy_button: Session.new_game(Game.DIFFICULTY.EASY)
+	if selected_button == normal_button:  Session.new_game(Game.DIFFICULTY.NORMAL)
+	if selected_button == hard_button:  Session.new_game(Game.DIFFICULTY.HARD)
 	if selected_button == return_button: select_menu.emit(StartMenu.MENU.MAIN_MENU)
-	else: get_node("/root/Main").queue_free()
+	else: get_node("/root/Main/StartMenu").queue_free()
