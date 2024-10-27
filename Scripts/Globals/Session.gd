@@ -14,6 +14,19 @@ var interface : Node
 var game : Game
 var world : World
 
+var paused = false
+
+func _ready() -> void:
+	process_mode = Node.PROCESS_MODE_ALWAYS # never pause the sessión
+
+func _unhandled_input(event: InputEvent) -> void:
+	if event.is_action_pressed("cancel") && !paused: 
+		get_tree().paused = true
+		paused = true
+	elif event.is_action_pressed("cancel") && paused:
+		get_tree().paused = false
+		paused = false
+
 func new_game(difficulty : Game.DIFFICULTY) -> void:
 	game = Game.new()
 	game.new_game(difficulty)
