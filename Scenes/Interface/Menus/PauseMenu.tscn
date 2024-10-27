@@ -1,0 +1,166 @@
+[gd_scene load_steps=2 format=3 uid="uid://dxuapsxcua4ab"]
+
+[ext_resource type="Texture2D" uid="uid://d3tyjv43a8p7y" path="res://Assets/Images/Characters/Aeldrya/StandPicture.png" id="1_7kad0"]
+
+[node name="PauseMenu" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="TextureRect" type="TextureRect" parent="."]
+layout_mode = 0
+offset_left = 69.0
+offset_top = 53.0
+offset_right = 306.0
+offset_bottom = 434.0
+texture = ExtResource("1_7kad0")
+expand_mode = 1
+
+[node name="Stats" type="ColorRect" parent="."]
+layout_mode = 0
+offset_left = 59.0
+offset_top = 414.0
+offset_right = 311.0
+offset_bottom = 686.0
+color = Color(1, 0.67451, 0.196078, 1)
+
+[node name="Label" type="Label" parent="Stats"]
+layout_mode = 0
+offset_left = 16.0
+offset_top = 21.0
+offset_right = 56.0
+offset_bottom = 44.0
+text = "LVL: 1"
+
+[node name="Label2" type="Label" parent="Stats"]
+layout_mode = 0
+offset_left = 16.0
+offset_top = 52.0
+offset_right = 61.0
+offset_bottom = 75.0
+text = "Vitality: 4"
+
+[node name="Label3" type="Label" parent="Stats"]
+layout_mode = 0
+offset_left = 21.0
+offset_top = 81.0
+offset_right = 93.0
+offset_bottom = 104.0
+text = "Strenght: 3
+"
+
+[node name="Label4" type="Label" parent="Stats"]
+layout_mode = 0
+offset_left = 22.0
+offset_top = 111.0
+offset_right = 107.0
+offset_bottom = 134.0
+text = "Agility: 6
+"
+
+[node name="Label5" type="Label" parent="Stats"]
+layout_mode = 0
+offset_left = 25.0
+offset_top = 144.0
+offset_right = 110.0
+offset_bottom = 167.0
+text = "Intellect: 4
+"
+
+[node name="Label6" type="Label" parent="Stats"]
+layout_mode = 0
+offset_left = 24.0
+offset_top = 174.0
+offset_right = 109.0
+offset_bottom = 197.0
+text = "Magic power: 5"
+
+[node name="Label7" type="Label" parent="Stats"]
+layout_mode = 0
+offset_left = 64.0
+offset_top = 203.0
+offset_right = 181.0
+offset_bottom = 226.0
+text = "Next level: 200"
+
+[node name="ProgressBar" type="ProgressBar" parent="Stats"]
+layout_mode = 0
+offset_left = 13.0
+offset_top = 236.0
+offset_right = 243.0
+offset_bottom = 263.0
+
+[node name="Button" type="Button" parent="."]
+layout_mode = 0
+offset_left = 357.0
+offset_top = 38.0
+offset_right = 714.0
+offset_bottom = 104.0
+text = "Items"
+
+[node name="Button2" type="Button" parent="."]
+layout_mode = 0
+offset_left = 364.0
+offset_top = 129.0
+offset_right = 718.0
+offset_bottom = 194.0
+text = "Skills
+"
+
+[node name="Button3" type="Button" parent="."]
+layout_mode = 0
+offset_left = 365.0
+offset_top = 214.0
+offset_right = 719.0
+offset_bottom = 279.0
+text = "Quests"
+
+[node name="Button4" type="Button" parent="."]
+layout_mode = 0
+offset_left = 367.0
+offset_top = 295.0
+offset_right = 721.0
+offset_bottom = 360.0
+text = "Map"
+
+[node name="Button5" type="Button" parent="."]
+layout_mode = 0
+offset_left = 367.0
+offset_top = 372.0
+offset_right = 721.0
+offset_bottom = 437.0
+text = "Settings"
+
+[node name="Button6" type="Button" parent="."]
+layout_mode = 0
+offset_left = 368.0
+offset_top = 452.0
+offset_right = 722.0
+offset_bottom = 517.0
+text = "Save"
+
+[node name="Button7" type="Button" parent="."]
+layout_mode = 0
+offset_left = 367.0
+offset_top = 529.0
+offset_right = 721.0
+offset_bottom = 594.0
+text = "Load"
+
+[node name="Button8" type="Button" parent="."]
+layout_mode = 0
+offset_left = 367.0
+offset_top = 612.0
+offset_right = 721.0
+offset_bottom = 677.0
+text = "Quit"
+
+[node name="ColorRect" type="ColorRect" parent="."]
+layout_mode = 0
+offset_left = 749.0
+offset_top = 40.0
+offset_right = 1247.0
+offset_bottom = 669.0

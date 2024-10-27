@@ -23,9 +23,11 @@ func _unhandled_input(event: InputEvent) -> void:
 	if event.is_action_pressed("cancel") && !paused: 
 		get_tree().paused = true
 		paused = true
+		interface.show_menu(interface.menus[1]) # TODO: Rewrite this so it makes sense...
 	elif event.is_action_pressed("cancel") && paused:
 		get_tree().paused = false
 		paused = false
+		interface.show_menu(interface.menus[0]) # TODO: Rewrite this so it makes sense...
 
 func new_game(difficulty : Game.DIFFICULTY) -> void:
 	game = Game.new()
