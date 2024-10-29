@@ -35,6 +35,7 @@ func new_game(difficulty : Game.DIFFICULTY) -> void:
 	#TODO: Initialize player to difficulty
 	
 	start_world()
+	world.load_map(World.MAP.KIRALITH_ENTRANCE)
 
 func start_world() -> void:
 	var main = get_node("/root/Main")
@@ -42,14 +43,10 @@ func start_world() -> void:
 	# Start Game Interface TODO: Isolate Node
 	interface = load("res://Scenes/Interface/PlayerInterface.tscn").instantiate()
 	world = World.new()
+	world.name = "World"
 	
 	main.add_child(interface)
 	main.add_child(world)
 	
-	# Start Maps Node
-	world.add_child(load("res://Scenes/Maps/Maps.tscn").instantiate())
-	
 	# Start "Player" TODO: Instantiate Aeldrya on World
 	world.add_child(load("res://Scenes/Entities/Characters/Aeldrya/Aeldrya.tscn").instantiate())
-	
-	world.name = "World"
