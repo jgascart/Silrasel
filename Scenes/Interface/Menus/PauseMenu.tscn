@@ -1,6 +1,7 @@
-[gd_scene load_steps=2 format=3 uid="uid://dxuapsxcua4ab"]
+[gd_scene load_steps=3 format=3 uid="uid://dxuapsxcua4ab"]
 
 [ext_resource type="Texture2D" uid="uid://d3tyjv43a8p7y" path="res://Assets/Images/Characters/Aeldrya/StandPicture.png" id="1_7kad0"]
+[ext_resource type="PackedScene" uid="uid://5r0v8h53hkqw" path="res://Scenes/Interface/Menus/QuickTravelMenu.tscn" id="2_d8g0j"]
 
 [node name="PauseMenu" type="Control"]
 layout_mode = 3
@@ -164,3 +165,6 @@ offset_left = 749.0
 offset_top = 40.0
 offset_right = 1247.0
 offset_bottom = 669.0
+
+[node name="QuickTravelMenu" parent="." instance=ExtResource("2_d8g0j")]
+layout_mode = 1
