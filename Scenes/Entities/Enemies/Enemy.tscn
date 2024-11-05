@@ -1,0 +1,15 @@
+[gd_scene load_steps=2 format=3 uid="uid://sal0la45njmc"]
+
+[ext_resource type="Script" path="res://Scenes/Entities/Enemies/Enemy.gd" id="1_wm1qk"]
+
+[node name="Enemy" type="CharacterBody2D"]
+script = ExtResource("1_wm1qk")
+
+[node name="HPLabel" type="Label" parent="."]
+offset_left = -46.0
+offset_top = -49.0
+offset_right = 46.0
+offset_bottom = -26.0
+text = "HP: 200/200"
+
+[node name="Hitbox" type="Area2D" parent="."]

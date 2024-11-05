@@ -1,0 +1,36 @@
+[gd_scene load_steps=5 format=3 uid="uid://dv08ylneh6lgq"]
+
+[ext_resource type="PackedScene" uid="uid://sal0la45njmc" path="res://Scenes/Entities/Enemies/Enemy.tscn" id="1_vs6bj"]
+[ext_resource type="Script" path="res://Scenes/Entities/Enemies/Grade1/Slime.gd" id="2_p5yny"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_s04se"]
+radius = 21.0
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_5wrmh"]
+radius = 21.0
+
+[node name="Enemy" instance=ExtResource("1_vs6bj")]
+collision_layer = 4
+collision_mask = 15
+motion_mode = 1
+
+[node name="Slime" type="Node" parent="." index="0"]
+script = ExtResource("2_p5yny")
+
+[node name="ColorRect" type="ColorRect" parent="." index="2"]
+offset_left = -20.0
+offset_top = -20.0
+offset_right = 20.0
+offset_bottom = 20.0
+color = Color(0, 1, 1, 1)
+
+[node name="Collision" type="CollisionShape2D" parent="." index="3"]
+shape = SubResource("CircleShape2D_s04se")
+
+[node name="Hitbox" parent="." index="4"]
+collision_layer = 4
+collision_mask = 8
+
+[node name="HitboxShape" type="CollisionShape2D" parent="Hitbox" index="0"]
+shape = SubResource("CircleShape2D_5wrmh")
+debug_color = Color(0.885263, 0.254501, 0.545253, 0.42)

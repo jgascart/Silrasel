@@ -30,6 +30,21 @@ var stats : Dictionary = {
 	"magic_power" : 0
 }
 
+func calculate_stats():	
+	# TODO: Add class stat points
+	
+	#############################
+	
+	stats["max_hp"] = stats["base_hit_points"] + (stats["vitality"] * 2)
+	stats["max_mp"] = stats["base_mana_points"] + stats["magic_power"]
+
+func gain_exp(monster_level, monster_grade) -> void:
+	var level_gap = (monster_level + (10 * (monster_grade - 1))) - stats["level"]
+	if level_gap + 10 < 0: return
+	var experience = (10 + level_gap) * (10 + level_gap)
+	stats["current_exp"] += experience
+	if stats["current_exp"] >= stats["next_level_exp"]: level_up()
+
 func level_up():
 	stats["level"] += 1
 	stats["base_hit_points"] += 3
@@ -41,11 +56,3 @@ func level_up():
 	stats["next_level_exp"] = int(stats["next_level_exp"] * 1.5)
 	if stats["current_exp"] >= stats["next_level_exp"]: level_up()
 	calculate_stats()
-
-func calculate_stats():	
-	# TODO: Add class stat points
-	
-	#############################
-	
-	stats["max_hp"] = stats["base_hit_points"] + (stats["vitality"] * 2)
-	stats["max_mp"] = stats["base_mana_points"] + stats["magic_power"]
