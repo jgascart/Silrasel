@@ -44,6 +44,12 @@ func _ready() -> void:
 func update_stats() -> void:
 	hp_label.text = "HP: " + str(hit_points) + "/" + str(max_hit_points)
 
+func spawn(spawn_level : int, spawn_grade : Enemy.ENEMY_GRADE, spawn_type : Enemy.ENEMY_TYPE) -> void:
+	level = spawn_level
+	grade = spawn_grade
+	type = spawn_type
+	set_stats()
+
 func set_stats() -> void:
 	match grade:
 		ENEMY_GRADE.GRADE_1:
