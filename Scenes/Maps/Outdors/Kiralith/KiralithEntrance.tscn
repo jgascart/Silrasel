@@ -37,5 +37,164 @@ tile_map_data = PackedByteArray("AADH/yYAAAAAAAAAAABp/xAAAAAAAAAAAAAv/wkAAAAAAAA
 tile_set = SubResource("TileSet_jetup")
 metadata/_edit_lock_ = true
 
-[node name="EnemySpawner" parent="." instance=ExtResource("4_0ds1w")]
+[node name="EnsemySpawners" type="Node2D" parent="."]
+
+[node name="EnemySpawner" parent="EnsemySpawners" instance=ExtResource("4_0ds1w")]
 position = Vector2(-941, -168)
+spawns = Array[String](["Slime"])
+
+[node name="EnemySpawner2" parent="EnsemySpawners" instance=ExtResource("4_0ds1w")]
+position = Vector2(-2415, -376)
+spawns = Array[String](["Slime"])
+
+[node name="EnemySpawner3" parent="EnsemySpawners" instance=ExtResource("4_0ds1w")]
+position = Vector2(-4108, -344)
+spawns = Array[String](["Slime"])
+
+[node name="EnemySpawner4" parent="EnsemySpawners" instance=ExtResource("4_0ds1w")]
+position = Vector2(-5443, -910)
+spawns = Array[String](["Slime"])
+
+[node name="EnemySpawner5" parent="EnsemySpawners" instance=ExtResource("4_0ds1w")]
+position = Vector2(-4653, -2058)
+spawns = Array[String](["Slime"])
+
+[node name="EnemySpawner6" parent="EnsemySpawners" instance=ExtResource("4_0ds1w")]
+position = Vector2(-2469, -1700)
+spawns = Array[String](["Slime"])
+
+[node name="EnemySpawner7" parent="EnsemySpawners" instance=ExtResource("4_0ds1w")]
+position = Vector2(-819, -1567)
+spawns = Array[String](["Slime"])
+
+[node name="EnemySpawner8" parent="EnsemySpawners" instance=ExtResource("4_0ds1w")]
+position = Vector2(943, -1305)
+spawns = Array[String](["Slime"])
+
+[node name="EnemySpawner9" parent="EnsemySpawners" instance=ExtResource("4_0ds1w")]
+position = Vector2(2262, -531)
+spawns = Array[String](["Slime"])
+
+[node name="EnemySpawner10" parent="EnsemySpawners" instance=ExtResource("4_0ds1w")]
+position = Vector2(2182, 1525)
+spawns = Array[String](["Slime"])
+
+[node name="EnemySpawner11" parent="EnsemySpawners" instance=ExtResource("4_0ds1w")]
+position = Vector2(2161, 3239)
+spawns = Array[String](["Slime"])
+
+[node name="EnemySpawner12" parent="EnsemySpawners" instance=ExtResource("4_0ds1w")]
+position = Vector2(2102, 5403)
+spawns = Array[String](["Slime"])
+
+[node name="EnemySpawner13" parent="EnsemySpawners" instance=ExtResource("4_0ds1w")]
+position = Vector2(1838, 8519)
+spawns = Array[String](["Slime"])
+
+[node name="EnemySpawner14" parent="EnsemySpawners" instance=ExtResource("4_0ds1w")]
+position = Vector2(424, 10820)
+spawns = Array[String](["Slime"])
+
+[node name="EnemySpawner15" parent="EnsemySpawners" instance=ExtResource("4_0ds1w")]
+position = Vector2(-2381, 9190)
+spawns = Array[String](["Slime"])
+
+[node name="EnemySpawner16" parent="EnsemySpawners" instance=ExtResource("4_0ds1w")]
+position = Vector2(-4994, 8063)
+spawns = Array[String](["Slime"])
+
+[node name="EnemySpawner17" parent="EnsemySpawners" instance=ExtResource("4_0ds1w")]
+position = Vector2(-3244, 6673)
+spawns = Array[String](["Slime"])
+
+[node name="EnemySpawner18" parent="EnsemySpawners" instance=ExtResource("4_0ds1w")]
+position = Vector2(-1997, 4300)
+spawns = Array[String](["Slime"])
+
+[node name="EnemySpawner19" parent="EnsemySpawners" instance=ExtResource("4_0ds1w")]
+position = Vector2(-4226, 2550)
+spawns = Array[String](["Slime"])
+
+[node name="EnemySpawner20" parent="EnsemySpawners" instance=ExtResource("4_0ds1w")]
+position = Vector2(-5041, 4923)
+spawns = Array[String](["Slime"])
+
+[node name="EnemySpawner21" parent="EnsemySpawners" instance=ExtResource("4_0ds1w")]
+position = Vector2(-9308, 2933)
+spawns = Array[String](["Slime"])
+
+[node name="EnemySpawner22" parent="EnsemySpawners" instance=ExtResource("4_0ds1w")]
+position = Vector2(-8469, 7632)
+spawns = Array[String](["Slime"])
+
+[node name="EnemySpawner23" parent="EnsemySpawners" instance=ExtResource("4_0ds1w")]
+position = Vector2(-10387, 9070)
+spawns = Array[String](["Slime"])
+
+[node name="EnemySpawner24" parent="EnsemySpawners" instance=ExtResource("4_0ds1w")]
+position = Vector2(-13024, 11204)
+spawns = Array[String](["Slime"])
+
+[node name="EnemySpawner25" parent="EnsemySpawners" instance=ExtResource("4_0ds1w")]
+position = Vector2(-13432, 9598)
+spawns = Array[String](["Slime"])
+
+[node name="EnemySpawner26" parent="EnsemySpawners" instance=ExtResource("4_0ds1w")]
+position = Vector2(-6815, 1519)
+spawns = Array[String](["Slime"])
+
+[node name="EnemySpawner27" parent="EnsemySpawners" instance=ExtResource("4_0ds1w")]
+position = Vector2(-8661, 488)
+spawns = Array[String](["Slime"])
+
+[node name="EnemySpawner28" parent="EnsemySpawners" instance=ExtResource("4_0ds1w")]
+position = Vector2(-11945, 200)
+spawns = Array[String](["Slime"])
+
+[node name="EnemySpawner29" parent="EnsemySpawners" instance=ExtResource("4_0ds1w")]
+position = Vector2(-14259, -123)
+spawns = Array[String](["Slime"])
+
+[node name="EnemySpawner30" parent="EnsemySpawners" instance=ExtResource("4_0ds1w")]
+position = Vector2(-15524, 1572)
+spawns = Array[String](["Slime"])
+
+[node name="EnemySpawner31" parent="EnsemySpawners" instance=ExtResource("4_0ds1w")]
+position = Vector2(-13264, 3079)
+spawns = Array[String](["Slime"])
+
+[node name="EnemySpawner32" parent="EnsemySpawners" instance=ExtResource("4_0ds1w")]
+position = Vector2(-15605, 5312)
+spawns = Array[String](["Slime"])
+
+[node name="EnemySpawner33" parent="EnsemySpawners" instance=ExtResource("4_0ds1w")]
+position = Vector2(-17623, 5985)
+spawns = Array[String](["Slime"])
+
+[node name="EnemySpawner34" parent="EnsemySpawners" instance=ExtResource("4_0ds1w")]
+position = Vector2(-18269, 4021)
+spawns = Array[String](["Slime"])
+
+[node name="EnemySpawner35" parent="EnsemySpawners" instance=ExtResource("4_0ds1w")]
+position = Vector2(-20556, 4505)
+spawns = Array[String](["Slime"])
+
+[node name="EnemySpawner36" parent="EnsemySpawners" instance=ExtResource("4_0ds1w")]
+position = Vector2(-20341, 6577)
+spawns = Array[String](["Slime"])
+
+[node name="EnemySpawner37" parent="EnsemySpawners" instance=ExtResource("4_0ds1w")]
+position = Vector2(-20018, 9483)
+spawns = Array[String](["Slime"])
+
+[node name="EnemySpawner38" parent="EnsemySpawners" instance=ExtResource("4_0ds1w")]
+position = Vector2(-20341, 2621)
+spawns = Array[String](["Slime"])
+
+[node name="EnemySpawner39" parent="EnsemySpawners" instance=ExtResource("4_0ds1w")]
+position = Vector2(-20610, -958)
+spawns = Array[String](["Slime"])
+
+[node name="EnemySpawner40" parent="EnsemySpawners" instance=ExtResource("4_0ds1w")]
+position = Vector2(-9281, -1308)
+spawns = Array[String](["Slime"])
