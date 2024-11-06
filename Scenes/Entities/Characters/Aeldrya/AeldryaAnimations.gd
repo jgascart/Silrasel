@@ -1,16 +1,21 @@
 extends AnimatedSprite2D
 
 var move_animation : String = "idle_down"
+@onready var direction: Node2D = $"../Direction"
 
 func animate_movement(move_direction : Vector2) -> void:
 	match move_direction:
 		Vector2(-1, 0):
+			direction.set_rotation_degrees(-180)
 			move_animation = "run_left"
 		Vector2(-1, -1):
+			direction.set_rotation_degrees(-135)
 			move_animation = "run_up_left"
 		Vector2(-1, 1):
+			direction.set_rotation_degrees(135)
 			move_animation = "run_down_left"
 		Vector2(0, -1):
+			direction.set_rotation_degrees(-90)
 			move_animation = "run_up"
 		Vector2(0, 0):
 			match move_animation:
@@ -23,12 +28,16 @@ func animate_movement(move_direction : Vector2) -> void:
 				"run_up_left" : move_animation = "idle_up_left"
 				"run_up_right" : move_animation = "idle_up_right"
 		Vector2(0, 1):
+			direction.set_rotation_degrees(90)
 			move_animation = "run_down"
 		Vector2(1, -1):
+			direction.set_rotation_degrees(-45)
 			move_animation = "run_up_right"
 		Vector2(1, 0):
+			direction.set_rotation_degrees(0)
 			move_animation = "run_right"
 		Vector2(1,1):
+			direction.set_rotation_degrees(45)
 			move_animation = "run_down_right"
 		
 	play(move_animation)

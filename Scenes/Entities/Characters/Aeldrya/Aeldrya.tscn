@@ -1,4 +1,4 @@
-[gd_scene load_steps=62 format=3 uid="uid://date0rfhedrwu"]
+[gd_scene load_steps=63 format=3 uid="uid://date0rfhedrwu"]
 
 [ext_resource type="Script" path="res://Scenes/Entities/Characters/Aeldrya/Aeldrya.gd" id="1_gdmr7"]
 [ext_resource type="Texture2D" uid="uid://cslviriu4mxxo" path="res://Assets/Images/Characters/Aeldrya/Animations/Idle/Idle_down.png" id="2_tvd42"]
@@ -459,6 +459,8 @@ animations = [{
 radius = 68.0
 height = 216.0
 
+[sub_resource type="CircleShape2D" id="CircleShape2D_iwj3y"]
+
 [node name="Aeldrya" type="CharacterBody2D"]
 scale = Vector2(0.5, 0.5)
 collision_mask = 6
@@ -490,3 +492,11 @@ rotation = 1.5708
 
 [node name="SkillPoint" type="Marker2D" parent="Direction"]
 position = Vector2(56, 0)
+
+[node name="InteractionArea" type="Area2D" parent="Direction"]
+collision_layer = 16
+collision_mask = 16
+
+[node name="InteractionShape" type="CollisionShape2D" parent="Direction/InteractionArea"]
+position = Vector2(92, -0.000333039)
+shape = SubResource("CircleShape2D_iwj3y")

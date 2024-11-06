@@ -3,6 +3,7 @@ extends CharacterBody2D
 const SPEED = 200
 @onready var animations : AnimatedSprite2D = $AeldryaAnimations
 var move_direction = Vector2(0,0)
+@onready var direction: Node2D = $Direction
 var running : bool = false
 
 func _physics_process(_delta: float) -> void:
@@ -33,7 +34,6 @@ func move() -> void:
 
 #TODO: Move to correct place
 @onready var skill_point : Marker2D = $Direction/SkillPoint
-@onready var direction : Node2D = $Direction
 @onready var skills : Node = $Skills
 #########
 
